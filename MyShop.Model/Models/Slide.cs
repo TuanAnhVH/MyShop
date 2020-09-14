@@ -16,11 +16,15 @@ namespace MyShop.Model.Models
         public int ID { set; get; }
 
         [Required]
+        [MaxLength(256)]
         public string Name { set; get; }
         [Required]
+        [MaxLength(256)]
         public string URL { set; get; }
         [Required]
+        [MaxLength(256)]
         public string Image  { set; get; }
+        [MaxLength(500)]
         public string Discription { set; get; }
         public int? DisplayOrder { set; get; }
         public bool Status { set; get; }

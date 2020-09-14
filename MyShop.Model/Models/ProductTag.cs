@@ -14,7 +14,9 @@ namespace MyShop.Model.Models
         [Key]
         public int ProductID { set; get; }
         [Key]
-        public int TagID { set; get; }
+        [Column(TypeName ="varchar")]
+        [MaxLength(50)]
+        public string TagID { set; get; }
 
 
         [ForeignKey("ProductID")]

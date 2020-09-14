@@ -17,16 +17,27 @@ namespace MyShop.Model.Models
         public int ID { set; get; }
 
         [Required]
+        [MaxLength(256)]
         public string CustomerName { set; get; }
         [Required]
+        [MaxLength(256)]
         public string CustomerAdress { set; get; }
+
         [Required]
+        [MaxLength(256)]
+        public string CustomerEmail { set; get; }
+        [Required]
+        [MaxLength(50)]
         public string CustomerPhone { set; get; }
 
+        [Required]
+        [MaxLength(256)]
         public string CustomerMessage { set; get; }
 
         public DateTime CreatedDate { set; get; }
         public string CreateBy{ set; get; }
+
+        [MaxLength(256)]
         public string PaymentMethod { set; get; }
         [Required]
         public string PaymentStatus { set; get; }

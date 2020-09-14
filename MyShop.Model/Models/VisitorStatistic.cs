@@ -15,8 +15,10 @@ namespace MyShop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
-        public DateTime VisitedDate { set; get; }
         [Required]
+        public DateTime VisitedDate { set; get; }
+
+        [MaxLength(50)]
         public string IPAdress { set; get; }
     }
 }
