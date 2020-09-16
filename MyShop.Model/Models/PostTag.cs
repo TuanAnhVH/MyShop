@@ -23,6 +23,7 @@ namespace MyShop.Model.Models
         public virtual Post Post { set; get; }
 
         [ForeignKey("TagID")]
+        [MaxLength(50)]
         public virtual Tag Tag { set; get; }
     }
 }
