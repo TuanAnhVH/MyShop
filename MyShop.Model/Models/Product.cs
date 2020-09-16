@@ -17,10 +17,16 @@ namespace MyShop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
         [Required]
+        [MaxLength(256)]
         public string Name { set; get; }
+        [Required]
+        [MaxLength(256)]
         public string Alias { set; get; }
+
+        [Required]
         public int CategoryID { set; get; }
 
+        [MaxLength(256)]
         public string Image { set; get; }
         public XElement MoreImages { set; get; }
 
@@ -30,6 +36,7 @@ namespace MyShop.Model.Models
 
         public int? Warranty { set; get; }
 
+        [MaxLength(500)]
         public string Description { set; get; }
 
         public string Content { set; get; }

@@ -15,13 +15,19 @@ namespace MyShop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
         [Required]
+        [MaxLength(256)]
         public string Name { set; get; }
+
+        [Column(TypeName = "varchar")]
+        [Required]
+        [MaxLength(256)]
         public string Alias { set; get; }
         public int CategoryID { set; get; }
 
+        [MaxLength(256)]
         public string Image { set; get; }
 
-    
+        [MaxLength(500)]
         public string Description { set; get; }
 
         public string Content { set; get; }

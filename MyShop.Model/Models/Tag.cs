@@ -12,9 +12,15 @@ namespace MyShop.Model.Models
     public class Tag
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { set; get; }
+        [MaxLength(50)]
+        public string ID { set; get; }
+
+        [MaxLength(50)]
+        [Required]
         public string Name { set; get; }
+
+        [MaxLength(50)]
+        [Required]
         public string Type { set; get; }
 
         public virtual IEnumerable<PostTag> PostTags { set; get; }

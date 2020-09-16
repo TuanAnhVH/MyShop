@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 namespace MyShop.Model.Models
 {
     [Table("VisitorStatistics")]
-    class VisitorStatistic
+    public class VisitorStatistic
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
-        public DateTime VisitedDate { set; get; }
         [Required]
+        public DateTime VisitedDate { set; get; }
+
+        [MaxLength(50)]
         public string IPAdress { set; get; }
     }
 }

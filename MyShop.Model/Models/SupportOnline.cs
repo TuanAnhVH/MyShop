@@ -15,12 +15,23 @@ namespace MyShop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
+        [MaxLength(50)]
         public string Department { set; get; }
+
+        [Required]
+        [MaxLength(50)]
         public string Name { set; get; }
+
+        [MaxLength(50)]
         public string Skype { set; get; }
+
+        [MaxLength(50)]
         public string Facebook { set; get; }
 
+        [MaxLength(50)]
         public string Email { set; get; }
+
+        [MaxLength(50)]
         public string Yahoo { set; get; }
         public bool? Status { set; get; }
     }

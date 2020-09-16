@@ -14,6 +14,8 @@ namespace MyShop.Model.Models
         [Key]
         public int PostID { set; get; }
         [Key]
+        [Column(TypeName = "varchar")]
+        [MaxLength(50)]
         public int TagID { set; get; }
 
 
@@ -21,6 +23,7 @@ namespace MyShop.Model.Models
         public virtual Post Post { set; get; }
 
         [ForeignKey("TagID")]
+        [MaxLength(50)]
         public virtual Tag Tag { set; get; }
     }
 }
